@@ -6,7 +6,7 @@ export default class Cabin extends React.Component {
     render() {
         return (
             <div className="cabin-box">
-
+                <Seat />
             </div>
         )
     }

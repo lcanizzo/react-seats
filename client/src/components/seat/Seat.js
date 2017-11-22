@@ -7,8 +7,8 @@ console.log(`Data in Seat.js:\n ${data}`)
 export default class Seat extends React.Component {
     render() {
         return (
-            <div className="">
-
+            <div className="seat">
+                <p>This is a seat.</p>
             </div>
         )
     }
