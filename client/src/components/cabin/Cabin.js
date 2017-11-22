@@ -20,13 +20,6 @@ export default class Cabin extends React.Component {
         return (
             <div className="cabin-box">
                <Seat info={this.state.firstSeat} />
-
-                {
-                    this.state.seats.forEach((seat)=>{
-                        // console.log(`Row: ${seat.row} \n Seat: ${seat.seat}`);
-                        <Seat info={seat}/>
-                    })
-                }
             </div>
         )
     }
