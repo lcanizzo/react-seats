@@ -4,8 +4,6 @@ import Navbar from './components/navbar/Navbar';
 import Cabin from './components/cabin/Cabin';
 import Seat from './components/seat/Seat';
 
-// console.log(`Data from App component: \n ${JSON.stringify(data)}`)
-
 class App extends Component {
 
   render() {

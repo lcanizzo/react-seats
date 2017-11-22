@@ -8,18 +8,18 @@ export default class Cabin extends React.Component {
         super(props);
         this.state = {
             seats: data,
-            firstSeat: data[0]
         }
-
-        // this.state.seats.map((seat)=>{ 
-        //   console.log(`Row: ${seat.row} \n Seat: ${seat.seat}`);
-        // })
     }
 
     render() {
         return (
             <div className="cabin-box">
-               <Seat info={this.state.firstSeat} />
+                {
+                    this.state.seats.map((seat)=>
+                        // console.log(`Row: ${seat.row} \n Seat: ${seat.seat}`);
+                        <Seat info={seat}/>
+                    )
+                }
             </div>
         )
     }
