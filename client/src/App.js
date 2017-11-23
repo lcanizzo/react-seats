@@ -8,7 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Navbar />
+      {/* Not rendering Nav for brevity
+        <Navbar /> */}
         <Cabin />
       </div>
     );
