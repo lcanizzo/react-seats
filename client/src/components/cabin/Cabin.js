@@ -14,12 +14,12 @@ export default class Cabin extends React.Component {
         return (
             <div className="cabin-box">
                 <SortSeats data={data}/>
-                {
+                {/* {
                     data.map((seat)=>
                         // console.log(`Row: ${seat.row} \n Seat: ${seat.seat}`);
                         <Seat info={seat}/>
                     )
-                }
+                } */}
             </div>
         )
     }
