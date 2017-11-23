@@ -2,21 +2,37 @@ import React from 'react';
 import Seat from '../seat/Seat';
 
 export default function SortSeats(props) {
-    props.data.sort(function(a,b) {
+    const seats = props.data.sort(function(a,b) {
         return a.row - b.row
     })
-    const sortedSeats = props.data;
+   
+    let highestRow = 1;
 
-    //Testing for Row rendering//
+    for (let i=0; i<seats.length; i++) {
+        if (seats[i].row > highestRow) {
+            highestRow = seats[i].row;
+        }
+    }
 
+    let rowArrays = [];
+    //Testing for Row sorting//
+    for (let i=1; i<highestRow+1; i++) {
+        let rowArray = seats.filter(function(seat) {
+            return seat.row == i;
+        })
+        rowArrays.push(rowArray);
+    }
 
+    for (let i=0; i<rowArrays.length; i++) {
+        console.log(`rowArrays:\n ${JSON.stringify(rowArrays[i])}`);        
+    }
     //End testing//
 
     return  (
 // B U L K    R E N D E R I N G
         // <div className='SortedData'>
         //     {
-        //         sortedSeats.map((seat, index, array)=>
+        //         seats.map((seat, index, array)=>
         //             <Seat info={seat}/>
         //         )
         //     }
@@ -25,7 +41,7 @@ export default function SortSeats(props) {
 //  F I R S T   R O W 
         // <div className='SortedData'>
         //     {
-        //         sortedSeats.map((seat, index)=> {
+        //         seats.map((seat, index)=> {
         //             if(seat.row === 1) {
         //                 return (
         //                     <div className="row-block">
@@ -45,7 +61,7 @@ export default function SortSeats(props) {
 //  B Y   R O W
         <div className='SortedData'>
             {
-                sortedSeats.map(function cb(currentSeat, index, array) {
+                seats.map(function cb(currentSeat, index, array) {
                     // if(index) {
                     //     console.log(`Row Hit:`);
                     //     console.log(array[index-1].row);
