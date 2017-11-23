@@ -1,5 +1,8 @@
 .rowBox {
+    clear: both;
+    position: relative;
+    display: block;
     margin: 10px 20px 10px 20px;
     border: solid;
-    border-color: red;
+    border-color: rgb(187, 84, 0);
 }

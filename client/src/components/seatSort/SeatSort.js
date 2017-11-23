@@ -7,7 +7,6 @@ export default function SortSeats(props) {
         return a.row - b.row
     })
 
-//Testing for Row sorting//
     // Determine Highest Row
     let highestRow = 1;
     for (let i=0; i<seats.length; i++) {
@@ -36,17 +35,11 @@ export default function SortSeats(props) {
         })
     }
 
-    // Log rowArrays to console
-    // for (let i=0; i<rowArrays.length; i++) {
-    //     console.log(`rowArrays:\n ${JSON.stringify(rowArrays[i])}`);        
-    // }
-//End testing//
-
     return  (
         <div className="sortedData">
             {
                 rowArrays.map((row) => 
-                    <div className="rowBox">
+                    <div className="container rowBox">
                         {    
                             row.map((seat) =>
                                 <Seat info={seat}/>

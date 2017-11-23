@@ -11,8 +11,8 @@ export default class Seat extends React.Component {
 
     render() {
         return (
-            <div className="seat">
-                <p>Info: {JSON.stringify(this.props.info)}</p>
+            <div className="row seatBox">
+                <button className="col btn btn-light seat">{this.props.info.seat}</button>
             </div>
         )
     }
