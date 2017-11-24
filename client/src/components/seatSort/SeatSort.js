@@ -1,6 +1,6 @@
 import React from 'react';
 import './SeatSort.css';
-import Seat from '../seat/Seat';
+import RowBox from '../rowBox/RowBox';
 
 export default function SortSeats(props) {
     const seats = props.data.sort(function(a,b) {
@@ -36,16 +36,10 @@ export default function SortSeats(props) {
     }
 
     return  (
-        <div className="sortedData">
+        <div className="container sortedData">
             {
                 rowArrays.map((row) => 
-                    <div className="container rowBox">
-                        {    
-                            row.map((seat) =>
-                                <Seat info={seat}/>
-                            ) 
-                        }
-                    </div>
+                    <RowBox row={row} />
                 )
             }
         </div>

@@ -11,8 +11,8 @@ export default class Seat extends React.Component {
 
     render() {
         return (
-            <div className="row seatBox">
-                <button className="col btn btn-light seat">{this.props.info.seat}</button>
+            <div className="col seatBox">
+                <button className="btn btn-light seat">{this.props.info.seat}</button>
             </div>
         )
     }
