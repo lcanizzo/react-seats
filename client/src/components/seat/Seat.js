@@ -13,17 +13,17 @@ export default class Seat extends React.Component {
         let space=null;
 
         if (!occupied) {
-            space = <button className="btn btn-light seat">{this.props.info.seat}</button>
+            space = <button className="btn btn-light space seat">{this.props.info.seat}</button>
         } else {
-            space = <button className="btn btn-light seat unavailable" disabled>{this.props.info.seat}</button>
+            space = <button className="btn btn-light space seat unavailable" disabled>{this.props.info.seat}</button>
         }
 
         if (aisle) {
-            space = <div className="aisle"></div>
+            space = <div className="space aisle"></div>
         }
 
         return (
-            <div className="col seatBox">
+            <div className="col-md-auto seatBox">
                 {space}
             </div>
         )

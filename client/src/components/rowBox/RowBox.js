@@ -45,11 +45,13 @@ export default class RowBox extends React.Component {
                     <h3 className="number">{this.props.rowArray[0].row}</h3>
                 </div>
                 <div className="col rowBox">
-                    {    
-                        possibleSeats.map((seat) =>
-                            <Seat info={seat}/>
-                        ) 
-                    }
+                    <div className="row justify-content-center seatsRow">
+                        {    
+                            possibleSeats.map((seat) =>
+                                <Seat info={seat}/>
+                            ) 
+                        }
+                    </div>
                 </div>
             </div>
         )

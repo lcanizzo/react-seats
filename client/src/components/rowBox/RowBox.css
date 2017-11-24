@@ -6,6 +6,7 @@
 
 .numberBox {
     float: left;
+    text-align: right;
 }
 
 .number {
