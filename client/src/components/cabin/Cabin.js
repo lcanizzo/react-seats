@@ -7,7 +7,6 @@ import SortSeats from '../seatSort/SeatSort';
 export default class Cabin extends React.Component {
     constructor(props) {
         super(props);
-        // console.log(`Cabin.js Data: \n ${JSON.stringify(data)}`)
     }
 
     render() {
