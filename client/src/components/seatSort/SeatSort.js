@@ -39,7 +39,7 @@ export default function SortSeats(props) {
         <div className="container sortedData">
             {
                 rowArrays.map((row) => 
-                    <RowBox row={row} />
+                    <RowBox rowArray={row} />
                 )
             }
         </div>

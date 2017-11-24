@@ -1,4 +1,13 @@
 .rowBox {
     clear: both;
     display: block;
+    padding: 0;    
+}
+
+.numberBox {
+    float: left;
+}
+
+.number {
+    padding-top: 15px;    
 }
