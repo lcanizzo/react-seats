@@ -20,7 +20,10 @@ export default class RowBox extends React.Component {
         const maxSeat = alphabet.indexOf(highestSeat);
         const possibleSeats = [];
         for (let i=0; i<maxSeat+1; i++) {
-            let letter = {seat: alphabet[i]}
+            let letter = {
+                seat: alphabet[i],
+                aisle: true,
+            }
             possibleSeats.push(letter);
         }
 
@@ -37,7 +40,6 @@ export default class RowBox extends React.Component {
         }
 
         return (
-//Row Rendering Without Aisles
             <div className="row line">
                 <div className="col-1 numberBox">
                     <h3 className="number">{this.props.rowArray[0].row}</h3>
@@ -53,18 +55,3 @@ export default class RowBox extends React.Component {
         )
     }
 }
-//Testing for possibleSeats Array
-{/* <div className="row line">
-    <div className="col-1 numberBox">
-        <h3 className="number">{this.props.rowArray[0].row}</h3>
-    </div>
-    <div className="col rowBox">
-        {    
-            possibleSeats.map((seat) =>
-                <div className="col seatBox">
-                    <button className="btn btn-light seat">{seat.seat}</button>            
-                </div>                        
-            ) 
-        }
-    </div>
-</div> */}

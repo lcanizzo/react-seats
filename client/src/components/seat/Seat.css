@@ -18,3 +18,11 @@
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
 }
+
+.aisle {
+    position: absolute;
+    left: 0;    
+    width: 60px;
+    height: 60px;
+    background-color: rgb(126, 126, 126);  
+}
