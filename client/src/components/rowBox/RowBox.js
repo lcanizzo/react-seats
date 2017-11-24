@@ -3,6 +3,20 @@ import './RowBox.css';
 import Seat from '../seat/Seat';
 
 export default class RowBox extends React.Component {
+        
+    constructor(props) {
+        super(props);
+        this.seatSelected = this.seatSelected.bind(this);
+        this.state= {
+            selectedSeat: null,
+        }
+    }
+
+    seatSelected(seat) {
+        console.log(`Seat passed to RowBox.js:\n ${seat}`);
+        this.props.selectSeat(seat);
+    }
+
     render() {
         let row = this.props.rowArray;
 
@@ -40,15 +54,15 @@ export default class RowBox extends React.Component {
         }
 
         return (
-            <div className="row line">
+            <div className="row">
                 <div className="col-1 numberBox">
                     <h3 className="number">{this.props.rowArray[0].row}</h3>
                 </div>
                 <div className="col rowBox">
-                    <div className="row justify-content-center seatsRow">
+                    <div className="row justify-content-center">
                         {    
                             possibleSeats.map((seat) =>
-                                <Seat info={seat}/>
+                                <Seat info={seat} selectSeat={this.seatSelected}/>
                             ) 
                         }
                     </div>
