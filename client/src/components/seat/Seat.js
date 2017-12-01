@@ -27,12 +27,11 @@ export default class Seat extends React.Component {
 
         if (!occupied) {
             space = <button className="btn btn-light space seat" value={seatInfo} onClick={this.select}> {this.props.info.seat} </button>
+            if (aisle) {
+                space = <div className="space aisle"></div>
+            }
         } else {
             space = <button className="btn btn-light space seat unavailable" disabled> {this.props.info.seat} </button>
-        }
-
-        if (aisle) {
-            space = <div className="space aisle"></div>
         }
 
         return (
